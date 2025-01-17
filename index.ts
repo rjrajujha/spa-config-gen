@@ -10,7 +10,7 @@ async function getVersion(): Promise<string> {
     try {
         const packageJsonPath = path.resolve(process.cwd(), "package.json");
         const packageJson = JSON.parse(await fs.readFile(packageJsonPath, "utf-8"));
-        return packageJson.version || "v1.0.1";
+        return packageJson.version || "v1.0.0";
     } catch {
         return "unknown";
     }
