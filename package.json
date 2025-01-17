@@ -1,0 +1,49 @@
+{
+  "name": "spa-config-gen",
+  "version": "1.0.0",
+  "description": "Generate configuration files for deploying Single Page Applications (SPAs) with proper routing support for .htaccess and nginx.conf.",
+  "main": "dist/index.js",
+  "type": "module",
+  "bin": {
+    "spa-config-gen": "dist/index.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "test": "echo \"No tests yet!\" && exit 0",
+    "prepublishOnly": "npm run build"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rjrajujha/spa-config-gen.git"
+  },
+  "bugs": {
+    "url": "https://github.com/rjrajujha/spa-config-gen/issues"
+  },
+  "homepage": "https://github.com/rjrajujha/spa-config-gen#readme",
+  "keywords": [
+    "reverse-proxy",
+    "spa",
+    "single-page-applications",
+    "react",
+    "angular",
+    "nginx",
+    "apache",
+    ".htaccess",
+    "nginx.conf"
+  ],
+  "author": "Raju Jha",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^20.17.14",
+    "typescript": "^5.0.0"
+  },
+  "engines": {
+    "node": ">=14"
+  }
+}
