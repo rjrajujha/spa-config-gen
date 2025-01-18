@@ -1,49 +1,41 @@
 {
   "name": "spa-config-gen",
-  "version": "1.0.1",
-  "description": "Generate configuration files for deploying Single Page Applications (SPAs) with proper routing support for .htaccess and nginx.conf.",
-  "main": "dist/index.js",
-  "type": "module",
-  "bin": {
-    "spa-config-gen": "dist/index.js"
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "cra-template": "1.2.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "react-router-dom": "^7.1.3",
+    "react-scripts": "5.0.1"
   },
   "scripts": {
-    "build": "tsc",
-    "start": "node dist/index.js",
-    "test": "echo \"No tests yet!\" && exit 0",
-    "prepublishOnly": "npm run build"
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
   },
-  "files": [
-    "dist",
-    "README.md",
-    "LICENSE"
-  ],
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/rjrajujha/spa-config-gen.git"
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
   },
-  "bugs": {
-    "url": "https://github.com/rjrajujha/spa-config-gen/issues"
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   },
-  "homepage": "https://github.com/rjrajujha/spa-config-gen#readme",
-  "keywords": [
-    "reverse-proxy",
-    "spa",
-    "single-page-applications",
-    "react",
-    "angular",
-    "nginx",
-    "apache",
-    ".htaccess",
-    "nginx.conf"
-  ],
-  "author": "Raju Jha",
-  "license": "MIT",
   "devDependencies": {
-    "@types/node": "^20.17.14",
-    "typescript": "^5.0.0"
-  },
-  "engines": {
-    "node": ">=14"
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.5.1",
+    "tailwindcss": "^3.4.17"
   }
 }

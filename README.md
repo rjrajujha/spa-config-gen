@@ -1,134 +1,70 @@
+# Getting Started with Create React App
 
-# spa-config-gen
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-[![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)  
-Generate configuration files for deploying Single Page Applications (SPAs) with proper routing support for popular reverse proxies like Apache and Nginx.
+## Available Scripts
 
-## Features
+In the project directory, you can run:
 
-- Generates `.htaccess` for Apache.
-- Generates `nginx.conf` for Nginx.
-- Supports additional configurations for reverse proxies such as Caddy, Traefik, and HAProxy.
-- Customizable output directory and server type.
-- Simple CLI interface for quick usage.
+### `npm start`
 
-## Installation
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-You can install the package globally using npm:
+The page will reload when you make changes.\
+You may also see any lint errors in the console.
 
-```bash
-npm install -g spa-config-gen
-```
+### `npm test`
 
-Or add it to your project as a development dependency:
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-```bash
-npm install --save-dev spa-config-gen
-```
+### `npm run build`
 
-## Usage
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
-### CLI Usage
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
 
-Run the following command in your terminal:
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-```bash
-spa-config-gen [options]
-```
+### `npm run eject`
 
-### Options
+**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-| Option             | Alias | Description                                                      | Default      |
-|--------------------|-------|------------------------------------------------------------------|--------------|
-| `--server`         | `-s`  | Specify the server type (`apache`, `nginx`, `caddy`, `traefik`, `haproxy`). | `apache`     |
-| `--dir <directory>`| `-d`  | Specify the output directory for the configuration file.         | `build`      |
-| `--help`           |       | Display help information.                                        | N/A          |
-| `--version`        | `-v`  | Display the current version of the package.                     | N/A          |
+If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-### Examples
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-#### Generate `.htaccess` for Apache
-```bash
-spa-config-gen --server apache --dir dist
-```
+You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-#### Generate `nginx.conf` for Nginx
-```bash
-spa-config-gen -s nginx -d build
-```
+## Learn More
 
-#### Show Help
-```bash
-spa-config-gen --help
-```
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-#### Show Version
-```bash
-spa-config-gen -v
-```
+To learn React, check out the [React documentation](https://reactjs.org/).
 
-## How It Works
+### Code Splitting
 
-1. The tool reads your specified options from the CLI.
-2. It validates the provided output directory.
-3. Based on the selected server type, it generates the appropriate configuration file (`.htaccess`, `nginx.conf`, etc.) in the specified directory.
+This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-## Supported Reverse Proxies
+### Analyzing the Bundle Size
 
-- **Apache**: Generates `.htaccess` for SPAs with fallback to `index.html`.
-- **Nginx**: Generates `nginx.conf` with `try_files` for SPA routing.
-- **Caddy**: Generates `Caddyfile` for SPAs.
-- **Traefik**: Generates configuration for SPAs in `traefik.yml`.
-- **HAProxy**: Generates `haproxy.cfg` for SPAs.
+This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-## File Structure
+### Making a Progressive Web App
 
-```plaintext
-spa-config-gen/
-├── src/
-│   ├── configs/
-│   │   ├── apache.js
-│   │   ├── nginx.js
-│   │   ├── caddy.js
-│   │   ├── traefik.js
-│   │   └── haproxy.js
-│   ├── generate.ts
-│   ├── help.ts
-│   └── index.ts
-├── dist/
-│   └── (Compiled JavaScript files)
-├── package.json
-├── tsconfig.json
-├── README.md
-└── LICENSE
-```
+This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
 
-## Development
+### Advanced Configuration
 
-### Build the Project
-Compile the TypeScript source code to JavaScript:
+This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
 
-```bash
-npm run build
-```
+### Deployment
 
-### Test the CLI
-Run the generated script:
+This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
 
-```bash
-node dist/index.js --help
-```
+### `npm run build` fails to minify
 
-## Contributing
-
-Contributions are welcome! Feel free to fork the repository and submit a pull request. For major changes, please open an issue first to discuss your idea.
-
-## License
-
-This project is licensed under the [MIT License](LICENSE).
-
-## Questions or Feedback?
-
-Feel free to open an issue on [GitHub](https://github.com/rjrajujha/spa-config-gen/issues) if you have any questions or feedback.
-
----
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
