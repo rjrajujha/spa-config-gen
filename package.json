@@ -1,6 +1,6 @@
 {
   "name": "spa-config-gen",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Generate configuration files for deploying Single Page Applications (SPAs) with proper routing support for .htaccess and nginx.conf.",
   "main": "dist/index.js",
   "type": "module",
