@@ -11,7 +11,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build && npm spa-config-gen -s netlify",
+    "build": "react-scripts build && npx spa-config-gen -s netlify",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
@@ -36,7 +36,7 @@
   "devDependencies": {
     "autoprefixer": "^10.4.20",
     "postcss": "^8.5.1",
-    "spa-config-gen": "^1.0.2",
+    "spa-config-gen": "^1.0.3",
     "tailwindcss": "^3.4.17"
   }
 }
