@@ -5,6 +5,8 @@ import nginxConfig from "./configs/nginx.js";
 import caddyConfig from "./configs/caddy.js";
 import traefikConfig from "./configs/traefik.js";
 import haproxyConfig from "./configs/haproxy.js";
+import netlifyConfig from "./configs/netlify.js"
+import renderConfig from "./configs/render.js";
 
 // Supported server configurations
 export const CONFIGS = {
@@ -13,6 +15,8 @@ export const CONFIGS = {
     caddy: caddyConfig,
     traefik: traefikConfig,
     haproxy: haproxyConfig,
+    netlify : netlifyConfig,
+    render: renderConfig,
 };
 
 // Type definitions
